@@ -47,7 +47,7 @@ public class MvcConfig implements WebMvcConfigurer {
 //			dataSource.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
 //			dataSource.setJdbcUrl("jdbc:log4jdbc:mariadb://localhost:3306/test");
 			dataSource.setUsername("admin");
-			dataSource.setPassword("hanok1234");
+			dataSource.setPassword("shinhan20240702");
 			return dataSource;
 		}
 		// MyBatis
