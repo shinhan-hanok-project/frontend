@@ -9,7 +9,7 @@
 		.container{
 			padding: 20px 0;
 			border-top: 1px solid #ddd;
-			background-color: #eeeeee;
+			background-color: #f9f9f9;
 		}
         #content{
             max-width: 1200px; 
