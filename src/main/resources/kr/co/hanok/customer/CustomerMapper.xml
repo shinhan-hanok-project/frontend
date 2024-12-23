@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.hanok.customer.CustomerMapper">
+
+	<!--  회원가입  -->
+		<insert id="insert" parameterType="kr.co.hanok.customer.CustomerVO"> 
+			INSERT INTO USERS_CUSTOMER (
+				customer_name ,customer_id, customer_pwd, customer_tel, customer_email,customer_address, customer_created
+			) VALUES (
+				#{customer_name},#{customer_id},MD5(#{customer_pwd}), #{customer_tel}, #{customer_email}, #{customer_address}, #{customer_created}, #{customer_created}
+			) </insert>
+	
+	<!--  로그인  -->
+		<select id="login" parameterType="map" resultType="kr.co.hanok.customer.CustomerVO"> 
+			SELECT * FROM USERS_CUSTOMER 
+			WHERE customer_id=#{customer_id} AND customer_pwd = MD(#{customer_pwd}) </select>
+	
+	<!--   마이페이지 수정  -->
+		<update id="updateCustomer" parameterType="kr.co.hanok.customer.CustomerVO"> 
+		UPDATE users 
+		SET name = #{name}, email = #{email} 
+		WHERE id = #{id} UPDATE users_customer SET customer_name = #{customer_name}, customer_id = #{customer_id}, customer_tel = #{customer_tel}, customer_email = #{customer_email}, customer_address = #{customer_address} WHERE customer_id = #{customer_id} </update>
+	
+	<!--  숙소 검색  (?) -->
+		<select id="searchAvailableAccommodations" parameterType="map" resultType="hanok.UserMapper"> 
+		SELECT checkin, checkout, capacity 
+		FROM reservations 
+		ORDER BY a.price_per_night ASC LIMIT #{} OFFSET #{1} </select>
+	
+	<!--  예약 테이블에 넣기  -->
+		<insert id="insertUser" parameterType="kr.co.hanok.customer.CustomerVO"> 
+		INSERT INTO reservations (
+			customer_name, customer_tel, pay_type
+		) VALUES (
+			#{customer_name}, #{customer_tel}, #{pay_type}
+		) </insert>
+	
+	<!--  결제 완료 정보조회  -->
+		<select id="selectUserById" resultType="kr.co.hanok.customer.CustomerVO"> 
+		SELECT customer_name, customer_tel, pay_type, pay_price 
+		FROM reservations 
+		WHERE customer_id = #{customer_id} </select>
+
+</mapper>

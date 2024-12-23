@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.hanok.admin.AdminMapper">
+
+	<!--  한옥리스트 목록 조회(관리자)  -->
+	
+	<!--  고객정보 목록 페이지  -->
+		<select id="list_c" parameterType="String" resultType="kr.co.hanok.admin.AdminVO"> 
+			SELECT customer_id, customer_name, customer_email, customer_tel 
+			FROM users_customers </select>
+		<select id="list_o" parameterType="String" resultType="kr.co.hanok.admin.AdminVO"> 
+			SELECT owner_id, owner_name, onwer_email, owner_tel, (SELECT hanok_name FROM hanoks h WHERE h.owner_id = uo.owner_id) AS 대표한옥 한옥 
+			FROM users_owners uo </select>
+	
+	<!--  고객정보 상세 페이지  -->
+	
+	<!--  고객 정보 수정  -->
+		<update id="updateCustomer" parameterType="int"> 
+			UPDATE users_customers 
+			SET customer_email = 
+				#{customer_email}, customer_name = #{customer_name}, customer_tel = #{customer_tel}, customer_address = #{customer_address}, updated_at = NOW() 
+			WHERE customer_id = #{customer_id} 
+		</update>
+	
+	<!--  고객 정보 삭제  -->
+		<delete id="deleteCustomer" parameterType="int"> 
+		DELETE FROM users_customers 
+		WHERE customer_id = #{customer_id} 
+		</delete>
+</mapper>
