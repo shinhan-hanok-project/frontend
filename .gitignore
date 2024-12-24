@@ -1,0 +1,3 @@
+# ignore MvcConfig.java
+MvcConfig.java
+src\main\java\config\MvcConfig.java
