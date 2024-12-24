@@ -18,7 +18,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerService service;	
 	
-	//login
+	//login test
 
 	@GetMapping("/customer/login.do")
 	public void login() {
