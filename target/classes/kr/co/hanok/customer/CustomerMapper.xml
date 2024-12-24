@@ -2,4 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.hanok.customer.CustomerMapper">
 
+	<select id="idCheck" parameterType="int" resultType="int">
+		SELECT
+		COUNT(*) FROM USERS_CUSTOMER WHERE customer_id=#{customer_id}
+	</select>
+	<select id="login" parameterType="map"
+		resultType="kr.co.hanok.customer.CustomerVO">
+		SELECT * FROM USERS_CUSTOMER WHERE
+		customer_id=#{customer_id} AND customer_pwd = MD5(#{customer_pwd})
+	</select>
+
+
 </mapper>
