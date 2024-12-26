@@ -11,6 +11,4 @@
 		SELECT * FROM USERS_CUSTOMER WHERE
 		customer_id=#{customer_id} AND customer_pwd = MD5(#{customer_pwd})
 	</select>
-
-
 </mapper>

@@ -8,7 +8,7 @@ public interface CustomerService {
 	
 	Map<String, Object> list(CustomerVO vo);
 
-	boolean idCheck(int customer_id);
 	CustomerVO login(Map map);
 
 }
+

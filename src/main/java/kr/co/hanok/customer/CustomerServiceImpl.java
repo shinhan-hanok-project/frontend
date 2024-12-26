@@ -10,12 +10,8 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerMapper mapper;
 	
-	@Override
-	public boolean idCheck(int customer_id) {
-		return mapper.idCheck(customer_id) >0 ? true : false;
-		
-		
-	}
+
+	
 	
 	@Override
 	public CustomerVO login(Map map) {
