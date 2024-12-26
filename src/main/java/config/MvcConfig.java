@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -101,6 +102,12 @@ public class MvcConfig implements WebMvcConfigurer {
 			resolver.setMaxUploadSize(1024*1024*5);
 			return resolver;
 		}
+		
+		@Override
+	    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	        registry.addResourceHandler("/resources/**")
+	                .addResourceLocations("/resources/");
+	    }
 		
 }
 
