@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,6 +84,8 @@
         <section class="pt-0">
             <div class="container">
                 <div class="row g-4">
+                
+                    <c:forEach var="customerVO" items="${map.list }">    
                     <!-- Card item 1 START -->
                     <div class="col-md-6 col-xl-4">
                     <div class="card card-hover-shadow pb-0 h-100">
@@ -119,6 +123,7 @@
                     </div>
                 </div>
                 <!-- Card item END -->
+                </c:forEach>
 
                     <!-- Card item 2 START -->
                     <div class="col-md-6 col-xl-4">

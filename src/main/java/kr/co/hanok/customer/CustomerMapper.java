@@ -7,9 +7,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface CustomerMapper {
-	List<CustomerVO> list(CustomerVO vo);
+	List<CustomerVO> list(CustomerVO customerVO);
 	//한옥 검색
-	CustomerVO searchHanok(String region, Timestamp checkin, Timestamp checkout, int people);
+	List<CustomerVO> searchHanok(CustomerVO customerVO);
 	//검색 후 한옥 수
-	int count(CustomerVO vo);
+	int count(CustomerVO customerVO);
 }

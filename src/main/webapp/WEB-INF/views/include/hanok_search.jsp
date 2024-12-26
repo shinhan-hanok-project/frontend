@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
    <style>
     #searching{
         display: flex;
@@ -72,27 +73,30 @@ $(function() {
     });
 });
 </script>
+
 <!--검색-->
-<div id="searching">
-    <!--장소 검색-->
-    <div id="loc" style="flex: 1;">
-        <img src="/resources/img/search_location.png" alt="위치" style="width: 30px; height: 35px;">
-        <input type="text" id="location" style="width: 200px;">
-    </div>
-
-    <!--날짜 검색-->
-    <div id="check" style="flex: 1;">
-        <img src="/resources/img/search_calender.png" alt="캘린더" style="width: 35px; height: 35px;">
-        <input  type="date" id="checkInDate" />
-        <input  type="date" id="checkOutDate"/>
-    </div>
-
-    <!--인원 수 검색-->
-    <div id="people" style="flex: 1;">
-        <img src="/resources/img/search_people.png" alt="인원" style="width: 35px; height: 35px; padding-left: 15px;">
-        <input type="text" id="capacity" style="width: 100px;">
-    </div>
-    <div id="btn">
-        <button class="search-button">Search</button>
-    </div>
-</div>
+<form action="hanok_search.do" method="post">
+	<div id="searching">
+	    <!--장소 검색-->
+	    <div id="loc" style="flex: 1;">
+	        <img src="/resources/img/search_location.png" alt="위치" style="width: 30px; height: 35px;">
+	        <input type="text" id="location" name="location" style="width: 200px;">
+	    </div>
+	
+	    <!--날짜 검색-->
+	    <div id="check" style="flex: 1;">
+	        <img src="/resources/img/search_calender.png" alt="캘린더" style="width: 35px; height: 35px;">
+	        <input type="date" id="checkInDate" name="checkInDate"/>
+	        <input type="date" id="checkOutDate" name="checkOutDate"/>
+	    </div>
+	
+	    <!--인원 수 검색-->
+	    <div id="people" style="flex: 1;">
+	        <img src="/resources/img/search_people.png" alt="인원" style="width: 35px; height: 35px; margin: 10px">
+	        <input type="text" id="capacity" name="capacity" style="width: 100px;">
+	    </div>
+	    <div id="btn">
+	        <button class="search-button">Search</button>
+	    </div>
+	</div>
+</form>
