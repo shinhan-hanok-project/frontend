@@ -103,7 +103,7 @@ Main Content START -->
 						<!-- Vector Image -->
 						<div class="col-lg-6 d-flex align-items-center order-2 order-lg-1">
 							<div class="p-3 p-lg-5">
-								<img src="/images/loginlogo.png" alt="" >
+								<img src="/images/loginlogo.png" alt="">
 							</div>
 							<!-- Divider -->
 							<div class="vr opacity-1 d-none d-lg-block"></div>
@@ -117,20 +117,20 @@ Main Content START -->
 									<img class="h-50px mb-4" src="/images/gojeunuoklogo.png" alt="logo">
 								</a>
 								<!-- Title -->
-								<h1 class="mb-2 h3">Welcome back customer!</h1>
-								<p class="mb-0">New here?<a href="sign-up.html"> Create an account</a></p>
+								<h1 class="mb-2 h3">Welcome owner!</h1>
+								<p class="mb-0">New here?<a href="owner_login.jsp"> Create an account</a></p>
 		
 								<!-- Form START -->
-								<form class="mt-4 text-start" action="login.do" method="post">
-									<!-- ID -->
+								<form class="mt-4 text-start" action="owner_login.do" method="post">
+									<!-- Email -->
 									<div class="mb-3">
-										<label class="form-label">Enter id</label>
-										<input type="text" name="customer_id" class="form-control">
+										<label class="form-label">Enter email id</label>
+										<input type="text" name="owner_id" class="form-control">
 									</div>
 									<!-- Password -->
 									<div class="mb-3 position-relative">
 										<label class="form-label">Enter password</label>
-										<input class="form-control fakepassword" type="password" name="customer_pwd">
+										<input class="form-control fakepassword" type="password" name="owner_pwd">
 										<span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
 											<i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
 										</span>
@@ -180,7 +180,7 @@ Main Content END -->
 <div class="back-top"></div>
 
 <!-- Bootstrap JS -->
-<script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- ThemeFunctions -->
 <script src="js/functions.js"></script>

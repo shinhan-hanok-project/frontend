@@ -71,7 +71,7 @@
 	</script>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="/hanok/images/favicon.ico">
+	<link rel="shortcut icon" href="/images/favicon.ico">
 
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,11 +79,11 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
 
 	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="/hanok/vendor/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="/hanok/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap-icons/bootstrap-icons.css">
 
 	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="/hanok/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
 
@@ -103,7 +103,7 @@ Main Content START -->
 						<!-- Vector Image -->
 						<div class="col-lg-6 d-flex align-items-center order-2 order-lg-1">
 							<div class="p-3 p-lg-5">
-								<img src="/hanok/images/element/signin.svg" alt="">
+								<img src="/images/loginlogo.png" alt="">
 							</div>
 							<!-- Divider -->
 							<div class="vr opacity-1 d-none d-lg-block"></div>
@@ -114,23 +114,23 @@ Main Content START -->
 							<div class="p-4 p-sm-7">
 								<!-- Logo -->
 								<a href="index.html">
-									<img class="h-50px mb-4" src="/hanok/images/logo-icon.svg" alt="logo">
+									<img class="h-50px mb-4" src="/images/gojeunuoklogo.png" alt="logo">
 								</a>
 								<!-- Title -->
 								<h1 class="mb-2 h3">Welcome owner!</h1>
 								<p class="mb-0">New here?<a href="sign-up.html"> Create an account</a></p>
 		
 								<!-- Form START -->
-								<form class="mt-4 text-start" action="login.do" method="post">
+								<form class="mt-4 text-start" action="admin_login.do" method="post">
 									<!-- Email -->
 									<div class="mb-3">
-										<label class="form-label">Enter email id</label>
-										<input type="text" name="customer_id" class="form-control">
+										<label class="form-label">Enter your id</label>
+										<input type="text" name="admin_id" class="form-control">
 									</div>
 									<!-- Password -->
 									<div class="mb-3 position-relative">
 										<label class="form-label">Enter password</label>
-										<input class="form-control fakepassword" type="password" name="customer_pwd">
+										<input class="form-control fakepassword" type="password" name="admin_pwd">
 										<span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
 											<i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
 										</span>

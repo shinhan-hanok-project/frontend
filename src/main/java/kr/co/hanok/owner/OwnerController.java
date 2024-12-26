@@ -21,13 +21,13 @@ public class OwnerController {
 	
 	//ownerlogin
 
-		@GetMapping("/owner/ownerlogin.do")
+		@GetMapping("/owner/owner_login.do")
 		public void login() {
 			 return;
 		}
-		@PostMapping("/owner/ownerlogin.do")
+		@PostMapping("/owner/owner_login.do")
 		public String loginProcess(@RequestParam Map map, Model model, HttpSession sess) {
-			OwnerVO vo = service.ownerlogin(map);
+			OwnerVO vo = service.login(map);
 			if(vo == null) {
 				model.addAttribute("msg", "사장님 아이디 비밀번호가 올바르지 않습니다.");
 				model.addAttribute("url" , "owner_login.do");

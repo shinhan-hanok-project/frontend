@@ -14,10 +14,18 @@ public class OwnerServiceImpl implements OwnerService {
 
 	
 	@Override
-	public OwnerVO ownerlogin(Map map) {
-		return mapper.ownerlogin(map);
+	public OwnerVO login(Map map) {
+		return mapper.login(map);
 	}
 
 
+	@Override
+	public Map<String, Object> list(OwnerVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
 	
 }
