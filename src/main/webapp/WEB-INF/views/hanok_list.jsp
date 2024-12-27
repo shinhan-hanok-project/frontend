@@ -15,14 +15,14 @@
 
 <!-- Plugins CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/font-awesome/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/bootstrap-icons/bootstrap-icons.css">
-<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/flatpickr/css/flatpickr.min.css">
-<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/choices/css/choices.min.css">
-<link rel="stylesheet" type="text/css" href="/resources/assets/vendor/nouislider/nouislider.css">
+<link rel="stylesheet" type="text/css" href="/assets/vendor/font-awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="/assets/vendor/flatpickr/css/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/vendor/choices/css/choices.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/vendor/nouislider/nouislider.css">
 
 <!-- Theme CSS -->
-<link rel="stylesheet" type="text/css" href="/resources/assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 	<style>
 	    #sep {
@@ -92,7 +92,7 @@
                         <!-- Overlay item -->
                         <div class="position-relative">
                             <!-- Image -->
-                            <img src="/resources/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
+                            <img src="/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
                         </div>
                         <!-- Image -->
 
@@ -131,7 +131,7 @@
                             <!-- Overlay item -->
                             <div class="position-relative">
                                 <!-- Image -->
-                                <img src="/resources/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
+                                <img src="/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
                             </div>
                             <!-- Image -->
         
@@ -169,7 +169,7 @@
                             <!-- Overlay item -->
                             <div class="position-relative">
                                 <!-- Image -->
-                                <img src="/resources/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
+                                <img src="/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
                             </div>
                             <!-- Image -->
         
@@ -207,7 +207,7 @@
                             <!-- Overlay item -->
                             <div class="position-relative">
                                 <!-- Image -->
-                                <img src="/resources/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
+                                <img src="/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
                             </div>
                             <!-- Image -->
         
@@ -245,7 +245,7 @@
                             <!-- Overlay item -->
                             <div class="position-relative">
                                 <!-- Image -->
-                                <img src="/resources/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
+                                <img src="/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
                             </div>
                             <!-- Image -->
         
@@ -283,7 +283,7 @@
                             <!-- Overlay item -->
                             <div class="position-relative">
                                 <!-- Image -->
-                                <img src="/resources/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
+                                <img src="/assets/images/category/tour/4by3/05.jpg" class="card-img-top" alt="Card image">
                             </div>
                             <!-- Image -->
         

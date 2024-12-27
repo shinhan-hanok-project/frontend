@@ -82,20 +82,20 @@ $(function() {
 	<div id="searching">
 	    <!--장소 검색-->
 	    <div id="loc" style="flex: 1;">
-	        <img src="/resources/img/search_location.png" alt="위치" style="width: 30px; height: 35px;">
+	        <img src="/assets/img/search_location.png" alt="위치" style="width: 30px; height: 35px;">
 	        <input type="text" id="location" name="location" style="width: 200px;">
 	    </div>
 	
 	    <!--날짜 검색-->
 	    <div id="check" style="flex: 1;">
-	        <img src="/resources/img/search_calender.png" alt="캘린더" style="width: 35px; height: 35px;">
+	        <img src="/assets/img/search_calender.png" alt="캘린더" style="width: 35px; height: 35px;">
 	        <input type="date" id="checkInDate" name="checkInDate" value=""/>
 	        <input type="date" id="checkOutDate" name="checkOutDate" value=""/>
 	    </div>
 	
 	    <!--인원 수 검색-->
 	    <div id="people" style="flex: 1;">
-	        <img src="/resources/img/search_people.png" alt="인원" style="width: 35px; height: 35px; margin: 10px">
+	        <img src="/assets/img/search_people.png" alt="인원" style="width: 35px; height: 35px; margin: 10px">
 	        <input type="text" id="capacity" name="capacity" style="width: 100px;">
 	    </div>
 	    <div id="btn">
