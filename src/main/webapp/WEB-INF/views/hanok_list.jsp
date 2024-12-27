@@ -338,9 +338,7 @@
 
     <!--footer-->
     <div id="sep">
-    	<jsp:include page="/WEB-INF/views/include/footer.jsp">
-			<jsp:param name="id" value="mine" />
-		</jsp:include>
+		<%@ include file="/WEB-INF/views/include/footer.jsp" %>
     </div>
 </body>
 </html>

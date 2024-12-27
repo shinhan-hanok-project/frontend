@@ -71,6 +71,9 @@ $(function() {
             this.value = today;
         }
     });
+    
+    document.getElementById('checkInDate').value = today;
+    document.getElementById('checkOutDate').value = today;
 });
 </script>
 
@@ -86,8 +89,8 @@ $(function() {
 	    <!--날짜 검색-->
 	    <div id="check" style="flex: 1;">
 	        <img src="/resources/img/search_calender.png" alt="캘린더" style="width: 35px; height: 35px;">
-	        <input type="date" id="checkInDate" name="checkInDate"/>
-	        <input type="date" id="checkOutDate" name="checkOutDate"/>
+	        <input type="date" id="checkInDate" name="checkInDate" value=""/>
+	        <input type="date" id="checkOutDate" name="checkOutDate" value=""/>
 	    </div>
 	
 	    <!--인원 수 검색-->

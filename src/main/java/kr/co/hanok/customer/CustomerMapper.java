@@ -12,4 +12,6 @@ public interface CustomerMapper {
 	List<CustomerVO> searchHanok(CustomerVO customerVO);
 	//검색 후 한옥 수
 	int count(CustomerVO customerVO);
+	
+	
 }

@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.hanok.customer.CustomerMapper">
+	<sql id="searchSql">
+	    <where>
+	        <trim prefixOverrides="AND">
+	            <if test="location != null and location != ''">
+	                h.hanok_name LIKE CONCAT('%', #{location}, '%')
+	            </if>
+	            <if test="capacity != null and capacity != ''">
+	                r.max_capacity >= #{capacity}
+	            </if>
+	        </trim>
+	    </where>
+	</sql>
+
 	<!-- 한옥 검색 -->
-	<select id="searchHanok" resultType="kr.co.hanok.customer.CustomerVO">
+	<select id="searchHanok" parameterType="kr.co.hanok.customer.CustomerVO" resultType="kr.co.hanok.customer.CustomerVO">
         SELECT
         	ri.image_url AS roomImage,
 		    h.hanok_name AS hanokName,
-		    r.room_price AS roomPrice 
+		    MIN(r.room_price) AS roomPrice 
         FROM 
 		    hanoks h
 		JOIN 
@@ -16,14 +29,32 @@
 		LEFT JOIN 
 		    reservations res ON r.room_id = res.room_id
 		    	AND (
-	                res.checkin < #{checkOutDate} 
-	                AND res.checkout > #{checkInDate}
+	                res.checkin >= #{checkOutDate} 
+	                OR res.checkout <= #{checkInDate}
             	)
-        WHERE 
-        	h.hanok_name LIKE CONCAT('%', #{location}, '%')
-		    AND r.max_capacity >= #{capacity}
+		<include refid="searchSql"/>
 		GROUP BY 
-		    r.room_id
+		    r.room_id, ri.image_url, h.hanok_name
+	    ORDER BY 
+        	MIN(r.room_price) ASC
 		LIMIT 1
     </select>
+    
+   	<!-- 한옥 검색 카운트 -->
+	<select id="count" parameterType="kr.co.hanok.customer.CustomerVO" resultType="int">
+		SELECT COUNT(DISTINCT r.room_id)
+        FROM 
+		    hanoks h
+		JOIN 
+		    rooms r ON h.hanok_id = r.hanok_id
+		JOIN 
+		    room_images ri ON r.room_id = ri.room_id
+		LEFT JOIN 
+		    reservations res ON r.room_id = res.room_id
+		    	AND (
+	                res.checkin >= #{checkOutDate} 
+	                OR res.checkout <= #{checkInDate}
+            	)	
+		<include refid="searchSql"/>
+	</select>
 </mapper>
